@@ -7,7 +7,7 @@ zombie_backpack = {
 }
 
 def nice_print_dictionary():
-    print("-----nicer print------")
+    print("-----nicer print-------")
     for key, value in zombie_backpack.items():
         if isinstance(value, list):
             print(f"{key}: {', '.join(value)}")
