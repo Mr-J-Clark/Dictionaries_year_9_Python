@@ -51,7 +51,7 @@ zombie_backpack["food"].append("tin of beans")
 print("\nAdded 'tin of beans' to the food section.")
 print(zombie_backpack)
 
-#remove the item water from the food key
+#remove the item soda from the food key
 zombie_backpack["food"].remove("soda")
 
 
