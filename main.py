@@ -1,8 +1,9 @@
+
 zombie_backpack = {
     "weapons": ["bat", "knife", "gun"],
     "bullets": 6,  # Starting with 5 bullets
     "shells": 10,
-    "food": ["water", "canned food"],
+    "food": ["water", "canned food","soda"],
     "tools": ["flashlight", "rope"]
 }
 
@@ -22,6 +23,41 @@ print(zombie_backpack)
 zombie_backpack["food"].append("tin of beans")
 print("\nAdded 'tin of beans' to the food section.")
 print(zombie_backpack)
+
+#remove water 
+
+zombie_backpack = {
+    "weapons": ["bat", "knife", "gun"],
+    "bullets": 6,  # Starting with 5 bullets
+    "shells": 10,
+    "food": ["water", "canned food","soda"],
+    "tools": ["flashlight", "rope"]
+}
+
+def nice_print_dictionary():
+    print("-----nicer print--------")
+    for key, value in zombie_backpack.items():
+        if isinstance(value, list):
+            print(f"{key}: {', '.join(value)}")
+        else:
+            print(f"{key}: {value}")
+
+# Print the initial state of the backpack.
+print("Initial backpack:")
+print(zombie_backpack)
+
+# Add a new item to the food section
+zombie_backpack["food"].append("tin of beans")
+print("\nAdded 'tin of beans' to the food section.")
+print(zombie_backpack)
+
+#remove the item water from the food key
+zombie_backpack["food"].remove("soda")
+
+
+#remove the whole "key with the title food"
+zombie_backpack.pop("food")
+
 
 # Remove bullets (e.g., after using some)
 bullets_to_remove = 3
@@ -49,4 +85,3 @@ print(zombie_backpack)
 nice_print_dictionary()
 nice_print_dictionary()
 nice_print_dictionary()
-
